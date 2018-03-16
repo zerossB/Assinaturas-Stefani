@@ -15,6 +15,7 @@ fontNBold = ImageFont.truetype("fonts\\Roboto-Bold.ttf", 12)
 wb = load_workbook(filename="xlsx\\Assinaturas.xlsx")
 sheet = wb['Sheet1']
 
+enum = 0
 for key, cell in enumerate(sheet):
     img = Image.new('RGB', (500, 135), (255, 255, 255))
     draw = ImageDraw.Draw(img)
@@ -48,3 +49,6 @@ for key, cell in enumerate(sheet):
                   COLOR, font=fontNormal)
 
     img.save("jpg/"+cell[2].value + '.jpg')
+    enum = enum + 1
+
+print("Gerei %d arquivos!" % enum)
