@@ -16,7 +16,6 @@ wb = load_workbook(filename="xlsx\\Assinaturas.xlsx")
 sheet = wb['Sheet1']
 
 for key, cell in enumerate(sheet):
-    #img = Image.open("Ass-Email.jpg")
     img = Image.new('RGB', (500, 135), (255, 255, 255))
     draw = ImageDraw.Draw(img)
 
@@ -24,7 +23,7 @@ for key, cell in enumerate(sheet):
     draw.text((215, 8), cell[0].value, COLOR, font=fontBold)
     draw.text((215, 29), cell[1].value, COLOR, font=fontBNormal)
 
-    stefani = Image.open("Logo-Stefani.jpg")
+    stefani = Image.open("img\\Logo-Stefani.jpg")
     stefani = stefani.resize((190, 65), Image.ANTIALIAS)
     img.paste(stefani, (4, 35))
 
