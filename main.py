@@ -5,14 +5,14 @@ COLOR = (23, 103, 200)
 COR_BG = (255, 255, 255)
 
 # font = ImageFont.truetype(<font-file>, <font-size>)
-fontBold = ImageFont.truetype("Roboto-Bold.ttf", 16)
-fontBNormal = ImageFont.truetype("Roboto-Regular.ttf", 14)
+fontBold = ImageFont.truetype("fonts\\Roboto-Bold.ttf", 16)
+fontBNormal = ImageFont.truetype("fonts\\Roboto-Regular.ttf", 14)
 
-fontNormal = ImageFont.truetype("Roboto-Regular.ttf", 12)
-fontNBold = ImageFont.truetype("Roboto-Bold.ttf", 12)
+fontNormal = ImageFont.truetype("fonts\\Roboto-Regular.ttf", 12)
+fontNBold = ImageFont.truetype("fonts\\Roboto-Bold.ttf", 12)
 
 
-wb = load_workbook(filename='xlsx\Assinaturas.xlsx')
+wb = load_workbook(filename="xlsx\\Assinaturas.xlsx")
 sheet = wb['Sheet1']
 
 for key, cell in enumerate(sheet):
@@ -25,8 +25,8 @@ for key, cell in enumerate(sheet):
     draw.text((215, 29), cell[1].value, COLOR, font=fontBNormal)
 
     stefani = Image.open("Logo-Stefani.jpg")
-    stefani = stefani.resize((128, 120), Image.ANTIALIAS)
-    img.paste(stefani, (40, 7))
+    stefani = stefani.resize((190, 65), Image.ANTIALIAS)
+    img.paste(stefani, (4, 35))
 
     draw.line([(205, 5), (205, 130)], fill=COLOR)
     draw.line([(215, 50), (490, 50)], fill=COLOR)
