@@ -27,6 +27,6 @@ Após isso dar o comando abaixo:
 Irá gerar uma pasta chamada "jpg" dentro de app, lá estará todas as assinaturas
 
 ## TODO
-- [] Argumentos Linha de comando
-- [] Documentar
-- [] Perder um tempo para arrumar as POG's
+- [ ] Argumentos Linha de comando
+- [ ] Documentar
+- [ ] Perder um tempo para arrumar as POG's
