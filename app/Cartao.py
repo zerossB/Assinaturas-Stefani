@@ -63,12 +63,12 @@ class Cartao(object):
 
     def _get_fonts(self):
         """
-        Pega a Logo da Empresa
+        Pega a Fonte da Empresa
         """
-        fontBold = ImageFont.truetype(self.f_name, self.fs_name)
-        fontBNormal = ImageFont.truetype(self.f_office, self.fs_office)
-        fontNormal = ImageFont.truetype(self.ft_paragraph, self.fs_paragraph)
-        fontNBold = ImageFont.truetype(self.f_paragraph, self.fs_paragraph)
+        fontBold = ImageFont.truetype(os.path.join(self.app_folder, "fonts", self.f_name), self.fs_name)
+        fontBNormal = ImageFont.truetype(os.path.join(self.app_folder, "fonts", self.f_office), self.fs_office)
+        fontNormal = ImageFont.truetype(os.path.join(self.app_folder, "fonts", self.ft_paragraph), self.fs_paragraph)
+        fontNBold = ImageFont.truetype(os.path.join(self.app_folder, "fonts", self.f_paragraph), self.fs_paragraph)
         return fontBold, fontBNormal, fontNormal, fontNBold
 
     def nome_saida(self, filename, saida):
@@ -124,4 +124,4 @@ class Cartao(object):
         if not os.path.exists(os.path.join(self.app_folder, saida)):
             os.mkdir(os.path.join(self.app_folder, saida))
 
-        img.save(self.nome_saida(cell[0].value, saida))
+        img.save(self.nome_saida(cell[2].value, saida))
