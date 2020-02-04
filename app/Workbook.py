@@ -1,12 +1,14 @@
 import os
 import sys
+
 from openpyxl import load_workbook
+
+dir_path = os.path.dirname(os.path.realpath(__file__))
 
 
 class Workbook(object):
-
-    def __init__(self, workbook="xlsx\\Assinaturas.xlsx", sheet="Sheet1"):
-        self.workbook = workbook
+    def __init__(self, workbook=os.path.join('xlsx', 'Assinaturas.xlsx'), sheet="Sheet1"):
+        self.workbook = os.path.join(dir_path, workbook)
         self.sheet = sheet
 
         self.check_files()
