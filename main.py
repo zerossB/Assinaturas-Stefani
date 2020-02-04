@@ -18,5 +18,5 @@ def main():
     print("Se passaram %f segundos" % (fim - ini))
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()
